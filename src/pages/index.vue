@@ -14,8 +14,8 @@ import { avarar_src, github_url, mail, mail_url, name, tags } from '~/assets/sta
             <a href="https://seclusion.life" title="莘野 SECLUSION." target="_blank">
                 <div class="i-ph:balloon-duotone"></div>
             </a>
-            <a href="/photos" title="Photos">
-                <div class="i-ph:image-duotone"></div>
+            <a href="/notes" title="Photos">
+                <div class="i-ph:notepad-duotone"></div>
             </a>
             <a href="/bookmarks" title="Bookmarks">
                 <div class="i-ph:bookmarks-duotone"></div>
