@@ -1,6 +1,8 @@
 ## Hi there 👋
 
 -   _[Website](https://zhaojiakun.cn)_
+-   _[Mail](mailto:jiakun.zhao@outlook.com)_
+
 -   _[莘野 SECLUSION.](https://seclusion.life)_
 
 #### Social platform

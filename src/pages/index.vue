@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { avarar_src, github_url, mail, mail_url, name, tags } from '~/assets/static.json'
+import { avarar_src, github_repo_url, github_url, mail, mail_url, name, tags } from '~/assets/static.json'
 </script>
 
 <template>
@@ -14,13 +14,13 @@ import { avarar_src, github_url, mail, mail_url, name, tags } from '~/assets/sta
             <a href="https://seclusion.life" title="莘野 SECLUSION." target="_blank">
                 <div class="i-ph:balloon-duotone"></div>
             </a>
-            <a href="/notes" title="Photos">
+            <a :href="`${github_repo_url}/issues`" title="Notes" target="_blank">
                 <div class="i-ph:notepad-duotone"></div>
             </a>
             <a href="/bookmarks" title="Bookmarks">
                 <div class="i-ph:bookmarks-duotone"></div>
             </a>
-            <a :href="github_url" title="GitHub">
+            <a :href="github_url" title="GitHub" target="_blank">
                 <div class="i-ph:github-logo-duotone"></div>
             </a>
         </div>
