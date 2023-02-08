@@ -6,6 +6,15 @@ import Pages from 'vite-plugin-pages'
 import UnoCSS from 'unocss/vite'
 import { presetIcons } from 'unocss'
 
+import type { AcceptedPlugin } from 'postcss'
+import autoprefixer from 'autoprefixer'
+import postcssSorting from 'postcss-sorting'
+import cssnano from 'cssnano'
+
+function injectPostCSSPlugin(plugins: AcceptedPlugin[]): AcceptedPlugin[] {
+    return process.env.NODE_ENV === 'production' ? plugins : []
+}
+
 export default defineConfig({
     plugins: [
         Vue(),
@@ -17,5 +26,18 @@ export default defineConfig({
     },
     server: {
         host: true,
+    },
+    css: {
+        postcss: {
+            plugins: injectPostCSSPlugin([
+                postcssSorting({
+                    'order': ['custom-properties', 'dollar-variables', 'declarations', 'at-rules', 'rules'],
+                    'properties-order': 'alphabetical',
+                    'unspecified-properties-position': 'bottom',
+                }),
+                cssnano({ preset: 'default' }),
+                autoprefixer,
+            ]),
+        },
     },
 })
