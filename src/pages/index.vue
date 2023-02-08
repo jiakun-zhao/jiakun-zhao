@@ -5,7 +5,7 @@ import { avarar_src, github_repo_url, github_url, mail, mail_url, name, tags } f
 <template>
     <div class="box flex-col">
         <img class="avatar" :src="avarar_src" alt="Avatar" />
-        <a class="name" href="/resume">{{ name }}</a>
+        <RouterLink class="name" to="/resume">{{ name }}</RouterLink>
         <a class="mail" :href="mail_url">{{ mail }}</a>
         <ul class="flex tags">
             <li v-for="(i, idx) of tags" :key="idx">{{ i }}</li>
@@ -17,9 +17,9 @@ import { avarar_src, github_repo_url, github_url, mail, mail_url, name, tags } f
             <a :href="`${github_repo_url}/issues`" title="Notes" target="_blank">
                 <div class="i-ph:notepad-duotone"></div>
             </a>
-            <a href="/bookmarks" title="Bookmarks">
+            <RouterLink to="/bookmarks" title="Bookmarks">
                 <div class="i-ph:bookmarks-duotone"></div>
-            </a>
+            </RouterLink>
             <a :href="github_url" title="GitHub" target="_blank">
                 <div class="i-ph:github-logo-duotone"></div>
             </a>
