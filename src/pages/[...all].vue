@@ -1,20 +1,6 @@
 <template>
-    <div>
+    <div class="font-mono ml-30vw mt-30vh">
         <h1>404</h1>
-        <p>Not found.</p>
+        <p class="mt-1rem text-c2">Not found.</p>
     </div>
 </template>
-
-<style lang="scss" scoped>
-div {
-    margin-top: 30vh;
-    margin-left: 30vw;
-    font-family: monospace;
-
-    p {
-        margin-top: 1rem;
-        font-family: monospace;
-        color: var(--c2);
-    }
-}
-</style>

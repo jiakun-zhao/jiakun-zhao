@@ -1,20 +1,6 @@
 <template>
-    <div>
+    <div class="font-mono ml-30vw mt-30vh">
         <h1>Todo...</h1>
-        <p>Please browse other contents.</p>
+        <p class="mt-1rem text-c2">Please browse other contents.</p>
     </div>
 </template>
-
-<style lang="scss" scoped>
-div {
-    margin-top: 30vh;
-    margin-left: 30vw;
-    font-family: monospace;
-
-    p {
-        margin-top: 1rem;
-        font-family: monospace;
-        color: var(--c2);
-    }
-}
-</style>
