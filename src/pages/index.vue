@@ -4,7 +4,7 @@ const iconPaddingVertical = 'px-[0.5rem]'
 </script>
 
 <template>
-    <div class="box flex flex-col items-center justify-center mt-32">
+    <div class="flex flex-col items-center justify-center mt-32">
         <img class="h-32 rounded-full w-32" :src="avarar_src" alt="Avatar" />
         <RouterLink class="font-bold mt-6 text-[1.5rem] text-c1" to="/resume">{{ name }}</RouterLink>
         <a class="mt-3 text-[0.85rem]" :href="mail_url">{{ mail }}</a>
