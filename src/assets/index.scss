@@ -57,3 +57,12 @@ div[class^='i-'] {
     display: inline-block;
     vertical-align: bottom;
 }
+
+#nprogress {
+    .bar {
+        background: var(--s1) !important;
+    }
+    .spinner {
+        display: none !important;
+    }
+}
