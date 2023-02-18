@@ -58,11 +58,6 @@ div[class^='i-'] {
     vertical-align: bottom;
 }
 
-#nprogress {
-    .bar {
-        background: var(--s1) !important;
-    }
-    .spinner {
-        display: none !important;
-    }
+#nprogress .bar {
+    background: var(--s1) !important;
 }

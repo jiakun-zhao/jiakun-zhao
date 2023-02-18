@@ -9,6 +9,7 @@ import 'nprogress/nprogress.css'
 import 'uno.css'
 
 const router = createRouter({ history: createWebHistory(), routes })
+NProgress.configure({ showSpinner: false })
 router.beforeEach(async (to, from, next) => {
     NProgress.start()
     next()
