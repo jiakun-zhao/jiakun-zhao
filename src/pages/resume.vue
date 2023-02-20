@@ -9,8 +9,7 @@ const { width: windowWidth } = useWindowSize()
 const wrapperStyle = computed(() => {
     const scale = windowWidth.value / wrapperWidth.value
     return {
-        'transform': `scale(${scale < 1 ? scale : 1})`,
-        'transform-origin': 'top left',
+        transform: `scale(${scale < 1 ? scale : 1})`,
     }
 })
 
@@ -41,20 +40,17 @@ const timeline = [{
     detail: ['专科 / 电子商务', '参加绍兴市单片机比赛'],
 }]
 
-const stacks = [
-    {
-        name: '设计类',
-        items: ['PS', 'Pr', 'Ai', 'CAD', 'Figma', '剪映'],
-    },
-    {
-        name: '开发类',
-        items: ['TypeScript', 'Vue', '微信小程序', 'React', 'Kotlin'],
-    },
-]
+const stacks = [{
+    name: '设计类',
+    items: ['PS', 'Pr', 'Ai', 'CAD', 'Figma', '剪映'],
+}, {
+    name: '开发类',
+    items: ['TypeScript', 'Vue', '微信小程序', 'React', 'Kotlin'],
+}]
 </script>
 
 <template>
-    <div ref="wrapper" leading-none w-8.3in h-11.7in font-mono relative text-.15in bg="#f6f2eb" text-primary box-border mx-auto overflow-hidden print:transform="none!" :style="wrapperStyle">
+    <div ref="wrapper" class="wrapper" leading-none w-8.3in h-11.7in font-mono relative text-.15in bg="#f6f2eb" text-primary box-border mx-auto overflow-hidden print:transform="none!" :style="wrapperStyle">
         <div class="item" mt-.8in>
             <div class="left">
                 <div text-black font-bold text-.3in>赵 家锟</div>
@@ -94,14 +90,20 @@ const stacks = [
             <div class="right">{{ item.name }}</div>
         </div>
 
-        <div absolute opacity-30 bottom-0 left-0 right-0 text-center print:display-none>
-            <div pb-.2in>最后更新于 2023-02-21 03:35</div>
-            <div pb-.2in>--- 使用浏览器打印功能获取PDF版本: 取消页眉页脚, 选择 A4 纸张, 无边距, 纵向打印 ---</div>
+        <div absolute opacity-30 bottom-0 left-0 right-0 text-center print:display-none text-.1in pb-.2in>
+            使用浏览器打印功能获取PDF版本: 取消页眉页脚, A4, 无边距, 纵向打印, 出现分页请设置缩放; 最后更新于 2023-02-21 03:35;
         </div>
     </div>
 </template>
 
 <style scoped>
+.wrapper {
+    transform-origin: top left;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
+}
+
 .item {
     display: flex;
     width: 92%;
