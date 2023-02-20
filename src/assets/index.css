@@ -19,7 +19,7 @@ a {
 }
 
 a:hover {
-    color: #6054ba;
+    color: #6054ba !important;
 }
 
 ::selection {
