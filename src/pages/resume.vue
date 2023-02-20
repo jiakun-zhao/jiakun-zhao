@@ -50,19 +50,21 @@ const stacks = [{
 </script>
 
 <template>
-    <div ref="wrapper" class="wrapper" leading-none w-8.3in h-11.7in font-mono relative text-.15in bg="#f6f2eb" text-primary box-border mx-auto overflow-hidden print:transform="none!" :style="wrapperStyle">
+    <div ref="wrapper" class="resume-wrapper" leading-none w-8.3in h-11.7in font-mono relative text-.15in bg="#f6f2eb" text-primary box-border mx-auto overflow-hidden print:transform="none!" :style="wrapperStyle">
         <div class="item" mt-.8in>
-            <div class="left">
-                <div text-black font-bold text-.3in>赵 家锟</div>
-                <a block mt-.5in underline-dashed underline :href="mail_url" target="_blank">{{ mail }}</a>
-                <div mt-.2in tracking-.015in>简约风格的平面设计师 / 保持学习的前端开发者</div>
+            <div class="left" flex="~ col">
+                <div text-black font-bold text-.3in flex-1 mt-.1in>赵 家锟</div>
+                <div>
+                    <a block underline-dashed underline :href="mail_url" target="_blank">{{ mail }}</a>
+                    <div mt-.2in tracking-.015in>简约风格的平面设计师 / 保持学习的前端开发者</div>
+                </div>
             </div>
             <div class="right">
                 <img w-1.5in h-1.5in block :src="resume_avatar_src" alt="avatar" />
             </div>
         </div>
 
-        <div class="item" my-.4in>
+        <div class="item" mb-.4in mt-.6in>
             <div class="left text-#bfa16e" text-.24in tracking-.015in font-bold>履历</div>
             <div class="right"></div>
         </div>
@@ -96,27 +98,27 @@ const stacks = [{
     </div>
 </template>
 
-<style scoped>
-.wrapper {
+<style>
+.resume-wrapper {
     transform-origin: top left;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
     color-adjust: exact;
 }
 
-.item {
+.resume-wrapper .item {
     display: flex;
     width: 92%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.item .left {
+.resume-wrapper .item .left {
     flex: 1;
     text-align: right;
 }
 
-.item .right {
+.resume-wrapper .item .right {
     width: 32%;
     margin-left: 0.4in;
 }
