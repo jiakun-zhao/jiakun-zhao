@@ -4,8 +4,23 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Jiakun Zhao</title>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="shortcut icon" type="image/png" href="/favicon.png" />
         <link rel="apple-touch-icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="theme-color">
+        <script>
+            (function () {
+                const html = document.querySelector('html')
+                const themeColorMeta = document.querySelector('head meta[name="theme-color"]')
+                const media = window.matchMedia('(prefers-color-scheme: dark)')
+                const setValue = (i) => {
+                    html.className = i.matches ? 'dark' : 'light'
+                    themeColorMeta.content = i.matches ? '#000' : '#fff'
+                }
+                setValue(media)
+                media.addEventListener('change', setValue)
+            })()
+        </script>
     </head>
     <body>
         <div id="app"></div>

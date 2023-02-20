@@ -4,7 +4,7 @@ import NProgress from 'nprogress'
 
 import routes from '~pages'
 
-import '~/assets/index.scss'
+import '~/assets/index.css'
 import 'nprogress/nprogress.css'
 import 'uno.css'
 
