@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { useElementSize, useWindowSize } from '@vueuse/core'
-import { computed, onMounted, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { mail, mail_url, resume_avatar_src } from '~/assets/static.json'
 
 const wrapper = ref<HTMLDivElement>()

@@ -7,7 +7,7 @@ import { avarar_src, github_repo_url, github_url, mail, mail_url, name, tags } f
         <img h-32 rounded-full w-32 :src="avarar_src" alt="Avatar" />
         <RouterLink font-bold mt-6 text-2xl text-black dark:text-white to="/resume">{{ name }}</RouterLink>
         <a mt-3 text-sm :href="mail_url">{{ mail }}</a>
-        <ul flex mt-6 list-none>
+        <ul flex mt-6 list-none p-0>
             <li v-for="(i, idx) of tags" :key="idx" bg-gray:15 cursor-default mx-3px px-6px py-3px rounded-4px text-xs>
                 {{ i }}
             </li>
