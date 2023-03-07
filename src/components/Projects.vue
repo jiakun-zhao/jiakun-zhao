@@ -21,7 +21,7 @@ const projects: Project[] = [{
     isWIP: false,
 }, {
     name: 'eslint-config',
-    src: 'https://github.com/jiakun-zhao/eslint-confi',
+    src: 'https://github.com/jiakun-zhao/eslint-config',
     desc: 'From antfu, and then more in line with my habits.',
     icon: 'i-mdi:eslint',
     isWIP: false,
