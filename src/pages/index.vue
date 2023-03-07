@@ -94,7 +94,7 @@ const online: Online[] = [{
         <div flex="~ col" gap-10>
             <a
                 v-for="project of projects" :key="project.name"
-                :href="project.src"
+                :href="project.src" target="_blank"
                 flex gap-6 box-border underline-transparent rounded-1.5
                 text-primary hover:opacity-40
             >
