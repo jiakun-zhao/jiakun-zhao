@@ -1,28 +1,32 @@
 import { URL, fileURLToPath } from 'node:url'
 import { defineConfig } from 'vite'
-
 import Vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 import UnoCSS from 'unocss/vite'
-import ImportCDN from '@jiakun-zhao/vite-plugin-cdn'
-
-import { UnoConfig, VitePlugins } from './use'
+import JsDelivr from 'vite-plugin-jsdelivr'
+import { presetAttributify, presetIcons, presetUno } from 'unocss'
+import { HtmlMinify, Styles } from './plugins'
 
 export default defineConfig({
     plugins: [
         Vue(),
         Pages({ dirs: [{ dir: 'src/pages', baseRoute: '' }] }),
-        UnoCSS(UnoConfig),
-        VitePlugins(),
-        ImportCDN({
-            url: 'https://welostyou.host/npm/',
-            modules: [
-                { name: 'vue', var: 'Vue', path: 'dist/vue.runtime.global.prod.js' },
-                { name: 'vue-router', var: 'VueRouter', path: 'dist/vue-router.global.prod.js' },
-                { name: '@vueuse/core', var: 'VueUse', path: 'index.iife.min.js' },
-                { name: '@vueuse/shared', var: 'VueUse', path: 'index.iife.min.js' },
+        UnoCSS({
+            presets: [
+                presetUno({ dark: 'media', preflight: false }),
+                presetAttributify(),
+                presetIcons({
+                    scale: 1.2,
+                    extraProperties: { 'display': 'inline-block', 'vertical-align': 'bottom' },
+                }),
             ],
+            theme: { colors: { primary: '#767676', dark: '#191919' } },
         }),
+
+        Styles(),
+        HtmlMinify(),
+
+        JsDelivr(),
     ],
     resolve: {
         alias: { '~': fileURLToPath(new URL('./src', import.meta.url)) },

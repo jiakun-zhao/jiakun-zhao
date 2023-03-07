@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { useElementSize, useWindowSize } from '@vueuse/core'
 import { computed, ref } from 'vue'
-import { mail, mail_url, resume_avatar_src } from '~/assets/static.json'
 
 const wrapper = ref<HTMLDivElement>()
 const { width: wrapperWidth } = useElementSize(wrapper)
@@ -55,12 +54,12 @@ const stacks = [{
             <div class="left" flex="~ col">
                 <div text-black font-bold text-.3in flex-1 mt-.1in>赵 家锟</div>
                 <div>
-                    <a block underline-dashed underline :href="mail_url" target="_blank">{{ mail }}</a>
+                    <a block underline-dashed underline href="mailto:jiakun.zhao@outlook.com" target="_blank">jiakun.zhao@outlook.com</a>
                     <div mt-.2in tracking-.015in>简约风格的平面设计师 / 保持学习的前端开发者</div>
                 </div>
             </div>
             <div class="right">
-                <img w-1.5in h-1.5in block :src="resume_avatar_src" alt="avatar" />
+                <img w-1.5in h-1.5in block src="https://s2.loli.net/2023/02/02/XeVhEI4Q8ak2dby.jpg" alt="avatar" />
             </div>
         </div>
 
