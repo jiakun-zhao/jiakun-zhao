@@ -73,18 +73,21 @@ a:hover {
     font-family: JetBrainsMono;
     src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Regular.woff2) format('woff2');
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: JetBrainsMono;
     src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold.woff2) format('woff2');
     font-weight: bold;
+    font-display: swap;
 }
 
 @font-face {
     font-family: JetBrainsMono;
     src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Italic.woff2) format('woff2');
     font-style: italic;
+    font-display: swap;
 }
 
 @font-face {
@@ -92,6 +95,7 @@ a:hover {
     src: url(https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Bold-Italic.woff2) format('woff2');
     font-weight: bold;
     font-style: italic;
+    font-display: swap;
 }
 
 ::selection {
