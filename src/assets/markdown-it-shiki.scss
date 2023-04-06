@@ -1,0 +1,21 @@
+.shiki {
+    background-color: transparent !important;
+}
+
+.shiki-container {
+    padding: 1.2em 1.6em;
+    background-color: var(--thirdly);
+    border-radius: 5px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .vitesse-light {
+        display: none;
+    }
+}
+
+@media (prefers-color-scheme: light), (prefers-color-scheme: no-preference) {
+    .vitesse-dark {
+        display: none;
+    }
+}

@@ -10,7 +10,11 @@ export default defineConfig({
         }),
     ],
     theme: {
-        colors: { primary: '#767676', dark: '#191919' },
+        colors: {
+            primary: 'var(--primary)',
+            secondary: 'var(--secondary)',
+            accent: 'var(--accent)',
+        },
         fontFamily: {
             mono: 'JetBrainsMono',
         },
