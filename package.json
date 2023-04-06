@@ -1,18 +1,24 @@
 {
-    "private": true,
     "version": "0.0.1",
+    "private": true,
     "type": "module",
     "scripts": {
-        "dev": "astro dev",
+        "astro": "astro",
         "build": "astro build",
-        "preview": "astro preview",
-        "astro": "astro"
+        "dev": "astro dev",
+        "preview": "astro preview"
     },
     "dependencies": {
         "astro": "^2.2.0",
         "autoprefixer": "^10.4.14",
         "cssnano": "^6.0.0",
+        "fast-glob": "^3.2.12",
+        "html-minifier": "^4.0.0",
         "sass": "^1.60.0",
         "unist-util-visit": "^4.1.2"
+    },
+    "devDependencies": {
+        "@types/html-minifier": "^4.0.2",
+        "@types/node": "^18.15.11"
     }
 }
