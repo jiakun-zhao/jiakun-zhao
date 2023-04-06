@@ -1,7 +1,7 @@
 ---
 title: 你好，世界！
 description: 这个个人网站的第一篇推文咯~
-date: 2023-04-07 01:03
+date: 2023-04-07 01:21
 og_image: hello-world.jpg
 ---
 
@@ -13,4 +13,10 @@ og_image: hello-world.jpg
 
 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="280" height="86" src="//music.163.com/outchain/player?type=2&id=27506733&auto=0&height=66"></iframe>
 
+<br>
+
+### Change log
+
 _2023-04-07 01:17_ 我要开始尝试部署到 Vercel 啦
+
+_2023-04-07 01:21_ 部署成功啦，现在应该会被我分享到朋友圈...

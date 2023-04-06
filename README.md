@@ -5,4 +5,4 @@
 
 #### Social platform
 
--   _Bilibili_ : [莘野 Seclusion](https://space.bilibili.com/35245056)
+-   _Bilibili_ : [那你生气吧](https://space.bilibili.com/35245056)
