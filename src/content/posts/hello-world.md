@@ -1,7 +1,7 @@
 ---
 title: 你好，世界！
 description: 这个个人网站的第一篇推文咯~
-date: 2023-04-07 01:21
+date: 2023-04-07 01:53
 og_image: hello-world.jpg
 ---
 
@@ -20,3 +20,7 @@ og_image: hello-world.jpg
 _2023-04-07 01:17_ 我要开始尝试部署到 Vercel 啦
 
 _2023-04-07 01:21_ 部署成功啦，现在应该会被我分享到朋友圈...
+
+_2023-04-07 01:26_ fix: astro site.
+
+_2023-04-07 01:53_ chore: html minify.
