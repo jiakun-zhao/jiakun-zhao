@@ -1,0 +1,42 @@
+/* 
+// 100 ~ 800
+const weight = [
+    'Thin',
+    'ExtraLight',
+    'Light',
+    'Regular',
+    'Medium',
+    'SemiBold',
+    'Bold',
+    'ExtraBold',
+] */
+
+@font-face {
+    font-display: swap;
+    font-family: JetBrainsMono;
+    font-weight: normal;
+    src: url('./jetbrains-mono@1.0.6/JetBrainsMono-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: JetBrainsMono;
+    font-style: italic;
+    font-weight: normal;
+    src: url('./jetbrains-mono@1.0.6/JetBrainsMono-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: JetBrainsMono;
+    font-weight: bold;
+    src: url('./jetbrains-mono@1.0.6/JetBrainsMono-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: JetBrainsMono;
+    font-style: italic;
+    font-weight: bold;
+    src: url('./jetbrains-mono@1.0.6/JetBrainsMono-Bold-Italic.woff2') format('woff2');
+}

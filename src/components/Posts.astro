@@ -1,0 +1,21 @@
+---
+import { getCollection } from 'astro:content'
+const posts = await getCollection('posts')
+
+function getTime(item: any) {
+    return new Date(item.data.date).getTime()
+}
+---
+
+<ul>
+    {
+        posts
+            .filter(item => item.data.date)
+            .sort((a, b) => getTime(a) - getTime(b))
+            .map(item => (
+                <li>
+                    <a href={`/post/${item.slug}`}>{item.data.title}</a>
+                </li>
+            ))
+    }
+</ul>

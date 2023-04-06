@@ -1,20 +1,12 @@
 {
+    "extends": "astro/tsconfigs/base",
     "compilerOptions": {
         "baseUrl": ".",
-        "target": "ES2018",
-        "module": "ESNext",
-        "lib": ["DOM", "ESNext"],
-        "strict": true,
-        "esModuleInterop": true,
-        "jsx": "preserve",
-        "skipLibCheck": true,
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "forceConsistentCasingInFileNames": true,
-        "types": ["vite/client", "vite-plugin-pages/client"],
+        "strictNullChecks": true,
         "paths": {
-            "~/*": ["src/*"]
+            "@components/*": ["src/components/*"],
+            "@layouts/*": ["src/layouts/*"],
+            "@assets/*": ["src/assets/*"]
         }
-    },
-    "exclude": ["dist", "node_modules"]
+    }
 }

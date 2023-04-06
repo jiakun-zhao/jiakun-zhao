@@ -1,0 +1,48 @@
+---
+import Posts from '@components/Posts.astro'
+import '@assets/styles/index.scss'
+const { frontmatter } = Astro.props
+const { origin } = Astro.url
+
+const info = {
+    title: frontmatter.title ?? 'Jiakun Zhao',
+    author: frontmatter.author ?? 'Jiakun Zhao',
+    description: frontmatter.description ?? "Jiakun Zhao's personal website.",
+    og_image: `${origin}/og-image/${frontmatter.og_image ?? 'icon.jpg'}`,
+}
+
+function isIndex() {
+    return frontmatter.file?.endsWith('index.md')
+}
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <title>{info.title}</title>
+        <meta property="og:title" content={info.title} />
+        <meta name="author" content={info.author} />
+        <meta name="description" content={info.description} />
+        <meta property="og:description" content={info.description} />
+        <meta property="og:image" content={info.og_image} />
+        <meta property="og:url" content={origin} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@zhaojiakun_cn" />
+        <!-- {isIndex() && <style> body { font-size: 0.875rem; } p { line-height: 1 !important;} </style>} -->
+    </head>
+    <body>
+        <header>
+            <h1>{info.title}</h1>
+            {frontmatter.date && <p>{frontmatter.date}</p>}
+        </header>
+        <main>
+            <slot />
+            {isIndex() && <Posts />}
+        </main>
+        <footer>
+            <p>Jiakun Zhao © 2023</p>
+        </footer>
+    </body>
+</html>

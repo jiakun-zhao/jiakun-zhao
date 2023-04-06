@@ -1,0 +1,42 @@
+:root {
+    --primary: black;
+    --secondary: #767676;
+    --thirdly: #fbfbfb;
+    --accent: #6054ba;
+
+    @media (prefers-color-scheme: dark) {
+        --primary: white;
+        --thirdly: #191919;
+    }
+}
+
+@import './jetbrains-mono.scss';
+@import './NetEase-CloudMusic-Card.scss';
+@import './body.scss';
+
+a {
+    color: var(--secondary);
+    text-decoration: none;
+    border-bottom: 1px dashed currentColor;
+    &:hover {
+        color: var(--accent);
+    }
+}
+
+code {
+    font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary);
+}
+
+::selection {
+    color: white;
+    background-color: var(--accent);
+}

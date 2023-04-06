@@ -1,13 +1,16 @@
 ---
-title: Jiakun Zhao
-description: Jiakun Zhao's Portfolio
+layout: '@layouts/BaseLayout.astro'
 ---
 
-Front-end developer / Graphic designer
+Front-end developer
 
-Currently working on WeChat applet development.
+Graphic designer
 
-Struggling to learn English...
+<br>
+
+Trying to understand everything.
+
+Struggling to learn English.
 
 <br>
 
@@ -16,7 +19,7 @@ Struggling to learn English...
 <br>
 <br>
 
-<img src="/src/assets/cover.jpg" alt="cover" style="width: 75%">
+<img src="/og-image/icon.jpg" alt="cover" style="width: 75%">
 
 <br>
 <br>
@@ -35,11 +38,9 @@ Struggling to learn English...
 -   [Twitter](https://twitter.com/zhaojiakun_cn)
 -   [Mastodon](https://mas.to/@zhaojiakun)
 
-<!-- -   [Unsplash](https://unsplash.com/@zhaojiakun) -->
-<!-- -   [Dribbble](https://dribbble.com/jiakun-zhao) -->
+<!-- - [Unsplash](https://unsplash.com/@zhaojiakun) -->
+<!-- - [Dribbble](https://dribbble.com/jiakun-zhao) -->
 
 <br>
 
 ### Posts
-
-<Posts />
