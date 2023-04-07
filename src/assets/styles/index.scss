@@ -4,11 +4,13 @@
     --thirdly: #fbfbfb;
     --accent: #6054ba;
     --background: #fff;
+    --link-border: #ddd;
 
     @media (prefers-color-scheme: dark) {
         --primary: white;
         --thirdly: #191919;
         --background: #111111;
+        --link-border: #333;
     }
 }
 
@@ -17,9 +19,9 @@ body {
     background-color: var(--background);
     margin: 0;
     padding: 4rem 0 2rem 0;
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-family: 'Trebuchet MS', 'Optima-Regular', 'PingFangTC-light', 'PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', monospace;
+    letter-spacing: 0.5px;
+    // 'Trebuchet MS', 'Optima-Regular', 'PingFangTC-light',
+    font-family: Arial, 'PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', monospace;
 
     & > * {
         max-width: 48rem;
@@ -36,9 +38,12 @@ body {
 a {
     color: var(--secondary);
     text-decoration: none;
-    border-bottom: 1px dashed currentColor;
+    border-bottom: 1px solid;
+    border-color: var(--link-border);
+    transition: all 500ms ease-in-out;
     &:hover {
         color: var(--accent);
+        border-color: currentColor;
     }
 }
 
