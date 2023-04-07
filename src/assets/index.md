@@ -1,16 +1,8 @@
----
-layout: '@layouts/BaseLayout.astro'
----
-
-Front-end developer
-
-Graphic designer
+Front-end developer<br>Graphic designer
 
 <br>
 
-Trying to understand everything.
-
-Struggling to learn English.
+Trying to understand everything.<br>Struggling to learn English.
 
 <br>
 

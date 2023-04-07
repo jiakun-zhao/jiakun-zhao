@@ -3,16 +3,35 @@
     --secondary: #767676;
     --thirdly: #fbfbfb;
     --accent: #6054ba;
+    --background: #fff;
 
     @media (prefers-color-scheme: dark) {
         --primary: white;
         --thirdly: #191919;
+        --background: #111111;
     }
 }
 
-@import './jetbrains-mono.scss';
-@import './NetEase-CloudMusic-Card.scss';
-@import './body.scss';
+body {
+    color: var(--secondary);
+    background-color: var(--background);
+    margin: 0;
+    padding: 4rem 0 2rem 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: 'Trebuchet MS', 'Optima-Regular', 'PingFangTC-light', 'PingFang SC', 'HarmonyOS_Regular', 'Helvetica Neue', 'Microsoft YaHei', monospace;
+
+    & > * {
+        max-width: 48rem;
+        margin: 0 auto;
+        padding: 1rem 1.6rem;
+        box-sizing: border-box;
+    }
+
+    & > main {
+        @import './markdown-body.scss';
+    }
+}
 
 a {
     color: var(--secondary);

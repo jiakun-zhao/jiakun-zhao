@@ -1,0 +1,10 @@
+---
+import BaseLayout from '~/components/BaseLayout.astro'
+import Posts from '~/components/Posts.astro'
+import { frontmatter, Content } from '~/assets/index.md'
+---
+
+<BaseLayout frontmatter={frontmatter}>
+    <Content />
+    <Posts />
+</BaseLayout>

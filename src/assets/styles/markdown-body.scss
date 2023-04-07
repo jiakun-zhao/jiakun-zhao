@@ -1,7 +1,12 @@
+p,
 li {
-    line-height: 2em;
+    line-height: 2.4em;
 }
 
-p {
-    line-height: 2em;
+div.NetEase-CloudMusic-Card {
+    width: min-content;
+    background-color: white;
+    border-radius: 3px;
+    margin: 2em 0;
+    height: 86px;
 }
