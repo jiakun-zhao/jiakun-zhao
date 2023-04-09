@@ -14,8 +14,8 @@ og_image: hello-world.jpg
 <br>
 
 <NetEaseCloudMusicCard 
-    src="http://music.163.com/song/media/outer/url?id=27506733.mp3" 
-    cover="http://p2.music.126.net/7rfdq76wB32RJFaeavI3yw==/109951167955119359.jpg"
+    src="https://music.163.com/song/media/outer/url?id=27506733.mp3" 
+    cover="https://p2.music.126.net/7rfdq76wB32RJFaeavI3yw==/109951167955119359.jpg"
     name="Oh Father"
     artist="Bodhi Jones"
 />
