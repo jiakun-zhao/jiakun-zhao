@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@jiakun-zhao/parse-html':
+    specifier: ^0.0.3
+    version: 0.0.3
   astro:
     specifier: ^2.2.0
     version: 2.2.0(@types/node@18.15.11)(sass@1.60.0)
@@ -563,6 +566,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@jiakun-zhao/parse-html@0.0.3:
+    resolution: {integrity: sha512-pfg5o/D8cRSixnjGmEqoZLhXAwKJ3elA5S3/vXbWdXlz3AFEF/ryUZ/4dtCVOsO9KgLgO4iKvnmKM5Rjpr8uMg==}
+    dev: false
 
   /@jridgewell/gen-mapping@0.1.1:
     resolution: {integrity: sha512-sQXCasFk+U8lWYEe66WxRDOE9PjVz4vSM51fTu3Hw+ClTpUSQb718772vH3pyS5pShp6lvQM7SxgIDXXXmOX7w==}
