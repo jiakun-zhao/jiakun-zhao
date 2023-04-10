@@ -41,33 +41,11 @@ export default defineConfig({
         remarkPlugins: [
             function () {
                 return function (tree) {
-                    // visit(tree, 'html', node => {
-                    //     if (/<iframe.+music\.163\.com.+><\/iframe>/.test(node.value)) {
-                    //         node.value = `<div class="NetEase-CloudMusic-Card">${node.value}</div>`
-                    //     }
-                    // })
                     visit(tree, 'link', node => {
                         if (node.url.startsWith('http')) {
                             const data = node.data || (node.data = {})
                             const props: any = data.hProperties || (data.hProperties = {})
                             props.target = '_blank'
-                        }
-                    })
-                    visit(tree, 'html', node => {
-                        if (node.value.startsWith('<NetEaseCloudMusicCard')) {
-                            const {
-                                attribute: { artist, cover, name, src },
-                            } = parseHtml(node.value.replaceAll('\n', ''))
-                            if (artist && cover && name && src) {
-                                node.value = `<div class="NetEaseCloudMusicCard" >
-                                    <img src="${cover}"/>
-                                    <div><strong>${name}</strong><span>${artist}</span></div>
-                                    <div class="icon"></div>
-                                    <audio controls src="${src}"></audio>
-                                </div>`
-                            } else {
-                                node.value = ''
-                            }
                         }
                     })
                 }

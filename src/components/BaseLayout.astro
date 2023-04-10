@@ -27,7 +27,6 @@ const { title = 'Jiakun Zhao', description = "Jiakun Zhao's personal website.", 
                 s.parentNode.insertBefore(hm, s)
             })()
         </script>
-        <script src="~/glob-script.ts"></script>
     </head>
     <body>
         <header>
@@ -40,5 +39,14 @@ const { title = 'Jiakun Zhao', description = "Jiakun Zhao's personal website.", 
         <footer>
             <p>Jiakun Zhao © 2023</p>
         </footer>
+        <script>
+            if (navigator.userAgent.toLowerCase().includes('micromessenger')) {
+                const title = document.title
+                const observer = new IntersectionObserver(([{ intersectionRatio }]) => {
+                    document.title = intersectionRatio ? '' : title
+                })
+                observer.observe(document.querySelector('body header h1')!)
+            }
+        </script>
     </body>
 </html>
