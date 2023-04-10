@@ -4,7 +4,6 @@ import { fileURLToPath } from 'node:url'
 import { minify } from 'html-minifier'
 import glob from 'fast-glob'
 import { readFile, writeFile } from 'node:fs/promises'
-import { parseHtml } from '@jiakun-zhao/parse-html'
 
 export default defineConfig({
     site: 'https://zhaojiakun.cn',
