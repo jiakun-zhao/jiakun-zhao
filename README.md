@@ -1,7 +1,7 @@
 ## Hi there 👋
 
--   _[Website](https://zhaojiakun.com)_
--   _[Mail](mailto:hi@zhaojiakun.com)_
+-   _[zhaojiakun.com](https://zhaojiakun.com)_
+-   _[hi@zhaojiakun.com](mailto:hi@zhaojiakun.com)_
 
 #### Social platform
 
