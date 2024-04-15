@@ -18,6 +18,11 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
+    },
+    "./html": {
+      "types": "./dist/html.d.ts",
+      "import": "./dist/html.mjs",
+      "require": "./dist/html.cjs"
     }
   },
   "main": "./dist/index.cjs",
@@ -35,7 +40,11 @@
     "test": "vitest -u"
   },
   "dependencies": {
-    "@antfu/utils": "^0.7.7"
+    "@antfu/utils": "^0.7.7",
+    "rehype-parse": "^9.0.0",
+    "rehype-preset-minify": "^7.0.0",
+    "rehype-stringify": "^10.0.0",
+    "unified": "^11.0.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.14.0",
