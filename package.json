@@ -1,0 +1,50 @@
+{
+  "name": "jiakun-zhao",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "Utils for Jiakun Zhao.",
+  "author": "Jiakun Zhao <hi@zhaojiakun.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/jiakun-zhao/jiakun-zhao#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jiakun-zhao/jiakun-zhao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jiakun-zhao/jiakun-zhao/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "tsx src/index.ts",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp && pnpm publish && npx cnpm sync jiakun-zhao",
+    "stub": "unbuild --stub",
+    "test": "vitest -u"
+  },
+  "dependencies": {
+    "@antfu/utils": "^0.7.7"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.14.0",
+    "@types/node": "^20.12.7",
+    "bumpp": "^9.4.0",
+    "eslint": "^9.0.0",
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5",
+    "unbuild": "^2.0.0",
+    "vitest": "^1.5.0"
+  }
+}
